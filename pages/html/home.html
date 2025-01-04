@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank of Gachibowli</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #004d99, #00b3b3);
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            font-style: italic;
+            margin: 10px 0;
+            color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: white;
+            color: #2c3e50;
+            padding: 40px 20px;
+            border-radius: 10px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 700px;
+            width: 90%;
+        }
+
+        .module {
+            text-align: center;
+            flex: 1;
+            margin: 0 15px;
+        }
+
+        .module h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+
+        button.primary {
+            background: #0073e6;
+            color: white;
+        }
+
+        button.primary:hover {
+            background: #005bb5;
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Bank of Gachibowli</h1>
+        <p>"Your Trust, Our Commitment"</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Employee Login -->
+        <div class="module">
+            <h2>Employee Login</h2>
+            <form action="/bog/login/employee">
+                <button type="submit" class="primary">Employee Login</button>
+            </form>
+        </div>
+
+        <!-- Customer Login -->
+        <div class="module">
+            <h2>Customer Login</h2>
+            <form action="/bog/login/customer" >
+                <button type="submit" class="primary">Customer Login</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

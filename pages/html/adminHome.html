@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Dashboard - Bank of Gachibowli</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+        margin:0;
+        font-family: "Poppins", sans-serif;
+    }
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #004d99, #00b3b3);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: #00284d;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .header p {
+            margin: 5px 0 0;
+            font-size: 1em;
+            font-style: italic;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            color: #2c3e50;
+            width: 250px;
+            height: 150px;
+            border-radius: 10px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background-color: #f4f4f4;
+        }
+
+        .card h2 {
+            margin: 0;
+            font-size: 1.3em;
+            color: #004d99;
+        }
+
+        .card p {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background: #00284d;
+            color: white;
+            font-size: 0.8em;
+        }
+
+        .footer a {
+            color: #00b3b3;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .log{
+        margin-left:950px;
+        height:80px;
+        width:100px;
+        text-decoration:none;
+        color:white;
+        padding:10px;
+        border:1px solid white;
+        border-radius:10px;
+        }
+        .log:hover{
+        background-color:white;
+        cursor:pointer;
+        color:red;}
+        .log a{
+        height:50px;
+        width:100px;
+        padding:20px;
+        
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Bank of Gachibowli</h1>
+        <p>Admin Dashboard - Manage your operations efficiently</p>
+        <a class="log" href="/bog/logout">Logout</a>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Create Customer -->
+        <a href="/bog/admin/add-employee-email" class="card">
+            <h2>Add employee emails</h2>
+        </a>
+
+        
+    </div>
+</body>
+</html>

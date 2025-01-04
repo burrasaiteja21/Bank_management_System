@@ -1,0 +1,140 @@
+<html>
+<head>
+	<title>
+		Employee Registration
+	</title>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+	h1{
+		text-transform: capitalize;
+		text-align:center;
+		color:white;
+		background-color: #0058A0;
+		padding:20px 0px;
+		postion:fixed;
+		width:100%;
+		top:0;
+	}
+	body{
+		margin:0;
+		font-family: "Poppins", sans-serif;
+	}
+	h2{
+		text-transform: capitalize;
+		text-align:center;
+	}
+	label{
+		text-transform: capitalize;
+	}
+	button{
+		text-transform: capitalize;
+	}
+	#form-frame{
+		display:flex;
+		width:100%;
+		flex-direction:column;
+		align-items:center;
+	}
+	form{
+		background-color:whitesmoke;
+		padding:30px;
+		border-radius:5px;
+		box-shadow:0px 0px 6px 1px rgba(0, 0, 0, 0.2);
+	}
+	label{
+		display:block;
+		margin: 5px 0px;
+	}
+	input:not([type='radio']),textarea{
+		margin:0px 0px 10px 5px;
+		height:30px;
+		padding:3px;
+		width:100%;
+	}
+	button{
+		text-transform: capitalize;
+		width:100%;
+		border:0 ;
+		cursor:pointer;
+		color:lightgrey;
+		background-color:black;
+		padding:10px;
+		border-radius :5px;
+		margin-top:10px;
+	}
+	textarea{
+		margin-bottom: 10px;
+	}
+	#footer{
+		position:fixed;
+		bottom:0px;
+		text-align:center;
+		background-color: #0058A0;
+		width:100%;
+		color:white;
+		padding:3px;
+	}
+</style>
+<script>
+	function validatePasswords(event) {
+		const password = document.getElementById("password").value;
+		const confirmPassword = document.getElementById("confirm-password").value;
+
+		if (password !== confirmPassword) {
+			alert("Passwords do not match. Please try again.");
+			event.preventDefault(); // Prevent form submission
+			return false;
+		}
+		return true;
+	}
+</script>
+
+</head>
+
+<body>
+	<h1>bank of gachibowli</h1>
+	<h2>employee registration service</h2>
+	<div id='form-frame'>
+	<form id="registration-details-form" method="post" action="/bog/create/employee" onsubmit="return validatePasswords(event)">
+		<table>
+		<tbody>
+		<tr>
+			<td><label for="first-name" >first name</label></td>
+			<td><input name="firstName" pattern="^[A-Za-z]+(?:\s[A-Za-z]+)*$" title="Name should only contain alphabets" id="first-name" type="text" required maxlength=50></td>
+		</tr>
+		<tr>
+			<td><label for="last-name">last name</label></td>
+			<td><input name="lastName" id="last-name" pattern="^[A-Za-z]+(?:\s[A-Za-z]+)*$" title="Name should only contain alphabets" type="text" required maxlength=50></td>
+		</tr>
+		<tr>
+			<td><label for="email">email</label></td>
+			<td><input name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Please enter a valid email address (e.g., example@domain.com)" id="email" type="email" required></td>
+		</tr>
+		<tr>
+			<td><label for="password">password</label></td>
+			<td><input name = "password" id="password" type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}$" title="Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, and one special character"  required maxlength=30 minlength=8></td>
+		</tr>
+		<tr>
+			<td><label for="confirm-password">confirm password</label></td>
+			<td><input id="confirm-password" type="password" required maxlength=30></td>
+		</tr>
+		<tr>
+			<td><label for="recovery-phrase">recovery phrase</label></td>
+			<td><input id="recovery-phrase" pattern="^.{8,}$" title="Recovery phrase must be at least 8 characters" type="text" required name="recoveryPhrase"></td>
+		</tr>
+		<tr>
+			<td><label for="address">address</label></td>
+			<td><textarea name="address" id="address" type="text" required maxlength=100></textarea></td>
+		</tr>
+		<tr>
+			<td><label for="contact-number">contact number</label></td>
+			<td><input name="contactNumber" pattern="^[6-9]\d{9}$" title="Phone number must be 10 digits and start with 6, 7, 8, or 9" id="contact-number" type="text" required ></td>
+		</tr>
+		</tbody>
+	</table>
+	<button >register</button>
+	</form>
+	</div>
+	<div id='footer'><a href="/bog/contact" style="color:white">@Team8</a></div>
+</body>
+</html>

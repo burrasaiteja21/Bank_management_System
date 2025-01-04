@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Bank of Gachibowli</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #0066cc, #00cccc);
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px;
+            font-size: 3em;
+            color: #ffffff;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 30px auto;
+            max-width: 1200px;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 350px;
+            margin: 15px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-card-front {
+            background: linear-gradient(to top, #ffffff, #f2f2f2);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flip-card-front i {
+            font-size: 5em;
+            margin-bottom: 20px;
+            color: #0073e6;
+        }
+
+        .flip-card-front h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .flip-card-front p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        .flip-card-back {
+            background: linear-gradient(to top, #0066cc, #004080);
+            color: white;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .flip-card-back h3 {
+            margin: 10px 0;
+            font-size: 1.5em;
+        }
+
+        .flip-card-back p {
+            font-size: 1.2em;
+        }
+
+        .flip-card-back a {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #00cccc;
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .flip-card-back a:hover {
+            background-color: #008080;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1em;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meet Our Team</h1>
+    <div class="team-container">
+        <!-- Team Member 1 -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <i class="fas fa-user-tie"></i>
+                    <h2>Sateesh</h2>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Sateesh</h3>
+                    <p>Email: kovvurisateesh.reddy@tcs.com</p>
+                    <p>ID : 2743474</p>
+                </div>
+            </div>
+        </div>
+        <!-- Team Member 2 -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <i class="fas fa-user-cog"></i>
+                    <h2>Karthikeya</h2>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Karthikeya</h3>
+                    <p>Email: karthikeya.irukuvajjula@tcs.com</p>
+                    <p>ID: 2728986</p>
+                </div>
+            </div>
+        </div>
+        <!-- Team Member 3 -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <i class="fas fa-user-alt"></i>
+                    <h2>Naveen</h2>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Naveen</h3>
+                    <p>Email: annapareddy.naveen1@tcs.com</p>
+                    <p>ID: 2742378</p>
+                </div>
+            </div>
+        </div>
+        <!-- Team Member 4 -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <i class="fas fa-user-astronaut"></i>
+                    <h2>Alekhya</h2>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Alekhya</h3>
+                    <p>Email: alekhya@tcs.com</p>
+                    <p>ID: 2742988</p>
+                </div>
+            </div>
+        </div>
+        <!-- Team Member 5 -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <i class="fas fa-user-graduate"></i>
+                    <h2>Nishitha</h2>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Nishitha</h3>
+                    <p>Email: nishitha@tcs.com</p>
+                    <p>ID: 2743026</p>
+                </div>
+            </div>
+        </div>
+        <!-- Team Member 6 -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <i class="fas fa-user-md"></i>
+                    <h2>Sai Teja</h2>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Sai Teja</h3>
+                    <p>Email: burra.saiteja1@tcs.com</p>
+                    <p>ID: 2733322</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

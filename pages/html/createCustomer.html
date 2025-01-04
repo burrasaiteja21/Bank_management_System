@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Create Customer
+	</title>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+	h2 {
+		text-transform: capitalize;
+		text-align: center;
+		color: #0058A0;
+		margin-top: 100px;
+	}
+
+	label {
+		text-transform: capitalize;
+		font-weight: bold;
+		color: #333;
+	}
+
+	button {
+		text-transform: capitalize;
+		border: 0;
+		cursor: pointer;
+		color: white;
+		background-color: #0058A0;
+		padding: 10px;
+		border-radius: 5px;
+		margin-top: 10px;
+		width: 100%;
+		font-size: 1rem;
+		transition: background-color 0.3s ease;
+	}
+
+	button:hover {
+		background-color: #003f73;
+	}
+
+	#form-frame {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 20px;
+	}
+
+	form {
+		padding: 25px;
+		background-color: whitesmoke;
+		box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		width: 90%;
+		max-width: 600px;
+	}
+
+	.sub-section {
+		display: flex;
+		flex-direction: column;
+		margin-top: 20px;
+	}
+
+	.section-fields {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+
+	.section-fields div {
+		flex: 1 1 calc(50% - 20px);
+	}
+	#pan{
+		text-transform: uppercase;
+	}
+
+	input:not([type='radio']), textarea {
+		width: 100%;
+		height: 35px;
+		padding: 5px;
+		margin-top: 5px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		font-size: 1rem;
+	}
+
+	input[type='radio'] {
+		margin-right: 10px;
+	}
+
+	textarea {
+		height: 80px;
+		resize: none;
+	}
+
+	div:has(input, label) {
+		margin: 10px 0px;
+	}
+
+	body {
+		font-family: "Poppins", sans-serif;
+		margin: 0;
+		background-color: #f4f4f9;
+		color: #333;
+	}
+
+	h1 {
+		text-transform: capitalize;
+		text-align: center;
+		color: white;
+		background-color: #0058A0;
+		padding: 15px 0px;
+		position: fixed;
+		width: 100%;
+		top: 0;
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+		margin:0;
+	}
+
+	#footer {
+		position: fixed;
+		bottom: 0px;
+		text-align: center;
+		background-color: #0058A0;
+		width: 100%;
+		color: white;
+		padding: 5px;
+		box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+	}
+
+	h4 {
+		text-transform: capitalize;
+		margin: 0px 0 10px 0;
+		color: #0058A0;
+	}
+	form{
+		margin-bottom:100px;
+	}
+	#logout{
+		font-size:small;
+		text-align:right;
+		margin:0px 30px;
+		cursor:pointer;
+		text-decoration:underline; 
+	}
+</style>
+</head>
+
+<body>
+	<h1>bank of gachibowli <div id="logout"><a href="/bog/logout" style="color: white;">logout</a></div></h1>
+	<h2>customer creation service</h2>
+	<div id="form-frame">
+	<form id="customer-details-form" method="post" action="/bog/employee/create-customer" >
+			
+		<div class='sub-section'>
+			<h4>account details</h4>
+			<div class='section-fields'>
+				<div><label for="customer-ssn-id" >customer SSN id</label>
+				<input id="customer-ssn-id" pattern="^\d{7}$" title="SSN must be exactly 7 digits" type="text" required name="ssn"></div>
+
+				<div><label for="balance">balance</label>
+				<input id="balance" type="number" required name="balance"></div>
+
+				<div><label>account type</label>
+					<div>
+						<input id="accountType-savings" type="radio" required name="accountType" value="0">
+						<label for="accountType-savings">savings</label>
+						<input id="accountType-current" type="radio" required name="accountType" value="1">
+						<label for="accountType-current">current</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class='sub-section'>
+			<h4>customer details</h4>
+			<div class='section-fields'>
+				<div><label for="customer-name">customer name</label>
+				<input id="customer-name"   pattern="^[A-Za-z]+(?:\s[A-Za-z]+)*$" title="Name should only contain alphabets" type="text" required name="name"></div>
+
+				<div><label for="dob">dob</label>
+				<input id="dob" type="date" required name="dob"></div>
+
+				<div><label>gender</label>
+					<div>
+						<input id="gender-male" type="radio" required name="gender" value="m">
+						<label for="gender-male">male</label>
+						<input id="gender-female" type="radio" required name="gender" value="f">
+						<label for="gender-female">female</label>
+					</div>
+				</div>
+
+				<div><label>marital status</label>
+					<div>
+						<input id="maritalStatus-married" type="radio" required name="maritalStatus" value="m">
+						<label for="maritalStatus-married">married</label>
+						<input id="maritalStatus-single" type="radio" required name="maritalStatus" value="s">
+						<label for="maritalStatus-single">single</label>
+					</div>
+				</div>
+
+				<div><label for="aadhar-number">aadhar number</label>
+				<input id="aadhar-number" pattern="^\d{12}$" title="Aadhar Number must be exactly 12 digits" type="text" required name="aadhar"></div>
+	
+				<div><label for="pan">PAN</label>
+				<input id="pan" type="text" pattern="[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}" title="PAN should be 5 letters, 4 digits, and 1 letter" required maxlength=10 name="pan"></div>
+			</div>
+		</div>
+
+		<div class='sub-section'>
+			<h4>customer contact details</h4>
+			<div class='section-fields'>
+				<div><label for="email">email</label>
+				<input id="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Please enter a valid email address (e.g., example@domain.com)" type="email" required name="email"></div>
+	
+				<div><label for="address">address</label>
+				<textarea id="address" type="text" required maxlength=100 name="address"></textarea></div>
+	
+				<div><label for="contact-number">contact number</label>
+				<input name="contactNumber" pattern="^[6-9]\d{9}$" title="Phone number must be 10 digits and start with 6, 7, 8, or 9" id="contact-number" type="text" required ></div>
+
+				<div><label for="recovery-phrase">recovery phrase</label>
+				<input id="recovery-phrase" pattern="^.{8,}$" title="Recovery phrase must be at least 8 characters" type="text" required name="recoveryPhrase"></div>
+			</div>
+		</div>
+		
+		<button>create customer</button>
+	</form>
+	</div>
+	<div id='footer'><a href="/bog/contact" style="color:white">@Team8</a></div>
+</body>
+</html>
